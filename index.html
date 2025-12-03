@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FounderKit - Kit Lengkap Jenama Sendiri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FACC15', // Kuning terang
+                            black: '#0F0F0F',  // Hitam pekat
+                            dark: '#1A1A1A',   // Hitam lembut
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-outline {
+            -webkit-text-stroke: 1px #FACC15;
+            color: transparent;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-brand-black bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-black text-white fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="block">
+                <img src="img/LogoFounderKit.svg" alt="FounderKit Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#langkah" class="hover:text-brand-yellow transition">Cara Join</a>
+                <a href="#produk" class="hover:text-brand-yellow transition">Senarai Produk</a>
+                <a href="#pakej" class="hover:text-brand-yellow transition">Pakej Harga</a>
+            </div>
+            <a href="#pakej"
+                class="bg-brand-yellow text-brand-black px-6 py-2 rounded-full font-bold hover:bg-white transition transform hover:scale-105">
+                Mula Sekarang
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-brand-black text-white pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-pattern opacity-20"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded bg-gray-800 text-brand-yellow text-xs font-bold tracking-widest mb-4 uppercase">
+                Jalan Pantas Bergelar Founder
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+                Bina Empayar Bisnes <br>
+                <span class="text-brand-yellow">Tanpa Pening Kepala.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                FounderKit adalah solusi "All-in-One" untuk anda yang ingin memiliki produk jenama sendiri. Pilih
+                produk, pilih pakej, kami uruskan selebihnya.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#langkah"
+                    class="bg-brand-yellow text-brand-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:shadow-lg hover:shadow-brand-yellow/50 transition transform hover:-translate-y-1">
+                    Lihat 3 Langkah Mudah
+                </a>
+                <a href="#pakej"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-black transition">
+                    Lihat Pakej
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div
+            class="absolute top-1/4 left-10 w-24 h-24 border-4 border-brand-yellow rounded-full opacity-20 animate-bounce">
+        </div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-brand-yellow rounded-full opacity-10 blur-xl"></div>
+    </header>
+
+    <!-- Step-by-Step Process Section -->
+    <section id="langkah" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4">Hanya 3 Langkah Mudah</h2>
+                <div class="w-24 h-2 bg-brand-yellow mx-auto"></div>
+                <p class="mt-4 text-gray-600">Perjalanan anda bergelar Founder bermula di sini.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <!-- Connecting Line (Desktop only) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gray-100 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-xl hover:border-brand-yellow transition group">
+                    <div
+                        class="w-24 h-24 bg-brand-black text-brand-yellow rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 group-hover:bg-brand-yellow group-hover:text-brand-black transition">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Pilih Produk Instant</h3>
+                    <p class="text-gray-500 text-center">Pilih niche dan jenis produk yang anda minat dari senarai
+                        katalog eksklusif kami.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-xl hover:border-brand-yellow transition group">
+                    <div
+                        class="w-24 h-24 bg-brand-black text-brand-yellow rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 group-hover:bg-brand-yellow group-hover:text-brand-black transition">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Pilih Pakej Founder</h3>
+                    <p class="text-gray-500 text-center">Tentukan bajet anda. Kami ada pakej permulaan hingga ke tahap
+                        profesional.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-xl hover:border-brand-yellow transition group">
+                    <div
+                        class="w-24 h-24 bg-brand-black text-brand-yellow rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 group-hover:bg-brand-yellow group-hover:text-brand-black transition">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Bayar & Team Hubungi</h3>
+                    <p class="text-gray-500 text-center">Selesaikan bayaran dan team FounderKit akan terus hubungi anda
+                        untuk proses seterusnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 1 Detail: Product Catalog Preview -->
+    <section id="produk" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-yellow font-bold uppercase tracking-widest text-sm">Langkah 1</span>
+                <h2 class="text-4xl font-black mt-2">Katalog Produk Instant</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+                    Semua produk tersedia dalam bentuk <strong>50gm/ml</strong>. Pilih kategori dan lihat koleksi kami.
+                </p>
+            </div>
+
+            <!-- Kategori Wanita -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 border-l-8 border-brand-yellow pl-4 flex items-center">
+                    <span
+                        class="bg-brand-black text-brand-yellow w-10 h-10 flex items-center justify-center rounded-full mr-3 shadow-lg">
+                        <i class="fas fa-female"></i>
+                    </span>
+                    Produk Wanita
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-leaf absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-leaf text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Essential Oil</h4>
+                            <p class="text-sm text-gray-500">Minyak aromaterapi asli daripada tumbuh-tumbuhan, tiada
+                                bahan kimia sintetik.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-baby absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-baby text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Postpartum</h4>
+                            <p class="text-sm text-gray-500">Krim, sabun dan minyak untuk hilangkan stretchmark & tambah
+                                susu ibu.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-gem absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-gem text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Beauty</h4>
+                            <p class="text-sm text-gray-500">Serum, minyak, krim, sabun, lip stick, lip balm untuk
+                                kecantikan wajah.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-person-pregnant absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-person-pregnant text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Pregnancy</h4>
+                            <p class="text-sm text-gray-500">Minyak & krim sapuan untuk morning sickness, sakit betis &
+                                loya.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-wand-magic-sparkles absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-wand-magic-sparkles text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Cosmetic</h4>
+                            <p class="text-sm text-gray-500">Produk anti-penuaan & hilangkan kedutan dalam bentuk sabun
+                                atau krim.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-droplet absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-droplet text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Acne</h4>
+                            <p class="text-sm text-gray-500">Solusi hilangkan jerawat & parut melalui sapuan sabun,
+                                minyak atau krim.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-circle-half-stroke absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-circle-half-stroke text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Whitening</h4>
+                            <p class="text-sm text-gray-500">Memutihkan wajah & badan. Gunakan secara konsisten untuk
+                                kesan terbaik.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-spray-can absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-spray-can text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Hijabista</h4>
+                            <p class="text-sm text-gray-500">Hijab mist untuk memberikan kewangian dan membersihkan
+                                hijab.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-glass-water absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-glass-water text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Detox</h4>
+                            <p class="text-sm text-gray-500">Detoks dan tambah seri kulit dalam bentuk sabun, minyak
+                                atau krim.</p>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-bottle-droplet absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-bottle-droplet text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Perfumery</h4>
+                            <p class="text-sm text-gray-500">Minyak wangi pelbagai aroma (semburan atau calitan).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Bayi -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 border-l-8 border-brand-yellow pl-4 flex items-center">
+                    <span
+                        class="bg-brand-black text-brand-yellow w-10 h-10 flex items-center justify-center rounded-full mr-3 shadow-lg">
+                        <i class="fas fa-baby"></i>
+                    </span>
+                    Produk Bayi
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-mortar-pestle absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-mortar-pestle text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Herbal</h4>
+                            <p class="text-sm text-gray-500">Minyak & krim buang angin untuk keselesaan bayi sepanjang
+                                hari.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-bath absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-bath text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Head To Toe</h4>
+                            <p class="text-sm text-gray-500">Mandian sabun & gel pembasmi kuman untuk bayi &
+                                kanak-kanak.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-hands-bubbles absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-hands-bubbles text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Eczema</h4>
+                            <p class="text-sm text-gray-500">Kurangkan masalah kulit, eczema, ruam lampin & kemerahan.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-moon absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-moon text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Sleep</h4>
+                            <p class="text-sm text-gray-500">Bantu bayi tidur lena (minyak hiduan, diffuse atau krim
+                                sapuan).</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-shield-virus absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-shield-virus text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Immune</h4>
+                            <p class="text-sm text-gray-500">Tingkatkan imun badan melalui sapuan atau hiduan essential
+                                oil.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-lungs absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-lungs text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Respiratory</h4>
+                            <p class="text-sm text-gray-500">Bantu buang kahak bayi melalui sapuan krim atau hiduan
+                                minyak.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Lelaki -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 border-l-8 border-brand-yellow pl-4 flex items-center">
+                    <span
+                        class="bg-brand-black text-brand-yellow w-10 h-10 flex items-center justify-center rounded-full mr-3 shadow-lg">
+                        <i class="fas fa-male"></i>
+                    </span>
+                    Produk Lelaki
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-dumbbell absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-dumbbell text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Muscle Oil/Cream</h4>
+                            <p class="text-sm text-gray-500">Hilangkan sakit sendi, bahu, otot & lutut. Sapuan dua kali
+                                sehari.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-cloud-sun absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-cloud-sun text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Stress Relief</h4>
+                            <p class="text-sm text-gray-500">Hilangkan stress melalui sapuan, semburan atau hiduan
+                                aromaterapi.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-bed absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-bed text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Snoring</h4>
+                            <p class="text-sm text-gray-500">Kurangkan masalah berdengkur (essential oil diffuse atau
+                                sapuan).</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-ban-smoking absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-ban-smoking text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Quit Smoking</h4>
+                            <p class="text-sm text-gray-500">Bantu kurangkan ketagihan merokok (sapuan atau semburan
+                                hidung).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Lain-lain -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-6 border-l-8 border-brand-yellow pl-4 flex items-center">
+                    <span
+                        class="bg-brand-black text-brand-yellow w-10 h-10 flex items-center justify-center rounded-full mr-3 shadow-lg">
+                        <i class="fas fa-box-open"></i>
+                    </span>
+                    Lain-lain Kategori
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-scissors absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-scissors text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Hair Growth</h4>
+                            <p class="text-sm text-gray-500">Lebatkan rambut bayi, kanak-kanak, wanita & lelaki
+                                (minyak).</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-brain absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-brain text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Mindfulness</h4>
+                            <p class="text-sm text-gray-500">Bantu kesihatan mental & depresi (minyak hiduan/diffuse
+                                atau krim).</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-fire absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-fire text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Candle</h4>
+                            <p class="text-sm text-gray-500">Lilin aromaterapi semulajadi atau pewangi sintetik.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                        <i
+                            class="fas fa-seedling absolute -bottom-4 -right-4 text-9xl text-gray-100 group-hover:text-brand-yellow/10 transition-colors duration-300 transform -rotate-12"></i>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 text-brand-black group-hover:bg-brand-yellow group-hover:shadow-lg transition-all">
+                                <i class="fas fa-seedling text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-black">Pertanian</h4>
+                            <p class="text-sm text-gray-500">Semburan tanaman, anti kulat & penggalak tumbuhan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 p-6 bg-brand-yellow/10 rounded-xl border border-brand-yellow/30 text-center">
+                <p class="text-brand-dark font-medium">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Nota: Produk selain dalam senarai di atas juga boleh disediakan melalui permintaan khas (Custom
+                    Request).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2 Detail: Pricing Packages -->
+    <section id="pakej" class="py-20 bg-brand-yellow">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span
+                    class="text-brand-black font-bold uppercase tracking-widest text-sm bg-white px-3 py-1 rounded">Langkah
+                    2</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-4 text-brand-black">Pilih Pakej Founder</h2>
+                <p class="text-brand-dark mt-4 text-lg font-medium">Labur mengikut kemampuan dan target bisnes anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Package 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-2xl relative transform transition hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800">Produk Instant</h3>
+                    <div class="my-6">
+                        <span class="text-4xl font-black tracking-tight">RM 999</span>
+                        <span class="text-gray-500">/mula</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm">Sesuai untuk yang baru nak test market dengan modal rendah.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> 50 Unit Produk
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> Packaging Standard
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> Sticker Label Asas
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-3"></i> Tiada Design Logo
+                        </li>
+                    </ul>
+                    <a href="#bayar"
+                        class="block w-full py-3 bg-gray-100 text-brand-black font-bold text-center rounded-lg hover:bg-brand-black hover:text-white transition">
+                        Pilih Pakej Ini
+                    </a>
+                </div>
+
+                <!-- Package 2 (Best Value) -->
+                <div
+                    class="bg-brand-black rounded-2xl p-8 shadow-2xl relative transform scale-105 border-4 border-white">
+                    <div
+                        class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        POPULAR</div>
+                    <h3 class="text-2xl font-bold text-brand-yellow">New Founder</h3>
+                    <div class="my-6">
+                        <span class="text-4xl font-black text-white tracking-tight">RM 1,499</span>
+                        <span class="text-gray-400">/mula</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm">Pakej lengkap untuk mulakan jenama nampak profesional.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> <strong>150 Unit Produk</strong>
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> Design Logo Professional
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> Packaging Premium
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> Marketing Kit (Gambar)
+                        </li>
+                    </ul>
+                    <a href="#bayar"
+                        class="block w-full py-3 bg-brand-yellow text-brand-black font-bold text-center rounded-lg hover:bg-white transition">
+                        Pilih Pakej Ini
+                    </a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-2xl relative transform transition hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800">Ultimate Founder</h3>
+                    <div class="my-6">
+                        <span class="text-4xl font-black tracking-tight">RM 3,999</span>
+                        <span class="text-gray-500">/mula</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm">Untuk yang serius nak bina empayar dan sistem ejen.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> <strong>500 Unit Produk</strong>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> Full Branding Guideline
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> Website E-Commerce
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> 1-on-1 Coaching Sesi
+                        </li>
+                    </ul>
+                    <a href="#bayar"
+                        class="block w-full py-3 bg-gray-100 text-brand-black font-bold text-center rounded-lg hover:bg-brand-black hover:text-white transition">
+                        Pilih Pakej Ini
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 3 Detail: CTA / Payment Section -->
+    <section id="bayar" class="py-24 bg-brand-black text-white">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-brand-yellow font-bold uppercase tracking-widest text-sm">Langkah 3</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-8 mt-4">Dah Bersedia?</h2>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Klik butang di bawah untuk lock harga promosi ini. Team kami akan hubungi anda dalam masa 24 jam selepas
+                pembayaran disahkan.
+            </p>
+
+            <div class="bg-brand-dark p-8 rounded-2xl max-w-md mx-auto border border-gray-800">
+                <h3 class="text-2xl font-bold text-white mb-6">Hubungi Kami Untuk Daftar</h3>
+                <div class="space-y-4">
+                    <button
+                        class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center transition text-lg">
+                        <i class="fab fa-whatsapp text-2xl mr-3"></i> WhatsApp Team FounderKit
+                    </button>
+                    <div class="flex items-center justify-center space-x-4 my-4">
+                        <div class="h-px bg-gray-700 w-full"></div>
+                        <span class="text-gray-500 text-sm">ATAU</span>
+                        <div class="h-px bg-gray-700 w-full"></div>
+                    </div>
+                    <button
+                        class="w-full bg-brand-yellow hover:bg-white text-brand-black font-bold py-4 px-6 rounded-lg transition text-lg">
+                        Isi Borang Tempahan
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">
+                    *Slot adalah terhad untuk memastikan kualiti produk terjaga.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <img src="img/LogoFounderKit.svg" alt="FounderKit Logo" class="h-8 w-auto mb-4">
+                    <p class="text-gray-500 text-sm mt-2">Rakan strategik kejayaan jenama anda.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-brand-yellow transition"><i
+                            class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-brand-yellow transition"><i
+                            class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-brand-yellow transition"><i
+                            class="fab fa-tiktok fa-lg"></i></a>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-900 pt-8 text-center md:text-left text-gray-600 text-sm flex flex-col md:flex-row justify-between">
+                <p>&copy; 2023 FounderKit Malaysia. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Terma & Syarat</a>
+                    <a href="#" class="hover:text-white">Polisi Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
