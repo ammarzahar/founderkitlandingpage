@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FounderKit - Kit Lengkap Jenama Sendiri</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
@@ -39,10 +40,57 @@
             background-image: radial-gradient(#333 1px, transparent 1px);
             background-size: 20px 20px;
         }
+
+        /* Gallery Marquee Styles */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 40s linear infinite;
+        }
+
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
 <body class="font-sans text-brand-black bg-white antialiased">
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center cursor-pointer"
+        onclick="closeLightbox()">
+        <div class="relative max-w-5xl max-h-[90vh] p-4">
+            <button
+                class="absolute -top-10 right-0 text-white text-3xl hover:text-brand-yellow transition">&times;</button>
+            <img id="lightbox-img" src="" alt="Gallery Fullscreen"
+                class="max-h-[85vh] w-auto rounded-lg shadow-2xl border-2 border-brand-yellow">
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="bg-brand-black text-white fixed w-full z-50 border-b border-gray-800">
@@ -96,6 +144,199 @@
         </div>
         <div class="absolute bottom-10 right-10 w-32 h-32 bg-brand-yellow rounded-full opacity-10 blur-xl"></div>
     </header>
+
+    <!-- Gallery Section (New) -->
+    <section class="py-12 bg-black overflow-hidden border-b border-gray-800 relative group">
+        <div class="absolute inset-0 bg-brand-yellow/5"></div>
+        <div class="container mx-auto px-6 mb-8 relative z-10 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                <span class="text-brand-yellow"><i class="fas fa-camera-retro mr-2"></i>Antara Hasil</span> Alumni
+                FounderKit
+            </h2>
+            <p class="text-gray-400 text-sm">Klik gambar untuk lihat lebih jelas</p>
+        </div>
+
+        <div class="marquee-container w-full">
+            <div class="marquee-content whitespace-nowrap">
+                <!-- Duplicate images for seamless loop -->
+                <!-- Set 1 -->
+                <div class="inline-flex gap-4 px-2">
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-13-31.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-13-31.jpg" alt="Gallery 1"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-43-42.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-43-42.jpg" alt="Gallery 2"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-43-44.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-43-44.jpg" alt="Gallery 3"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-54-40.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-54-40.jpg" alt="Gallery 4"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-54-43.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-54-43.jpg" alt="Gallery 5"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-54-57.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-54-57.jpg" alt="Gallery 6"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-01.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-01.jpg" alt="Gallery 7"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-07.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-07.jpg" alt="Gallery 8"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-10.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-10.jpg" alt="Gallery 9"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-13.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-13.jpg" alt="Gallery 10"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-16.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-16.jpg" alt="Gallery 11"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-20.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-20.jpg" alt="Gallery 12"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+                </div>
+
+                <!-- Set 2 (Duplicate for Seamless Loop) -->
+                <div class="inline-flex gap-4 px-2">
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-13-31.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-13-31.jpg" alt="Gallery 1"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-43-42.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-43-42.jpg" alt="Gallery 2"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-43-44.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-43-44.jpg" alt="Gallery 3"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-54-40.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-54-40.jpg" alt="Gallery 4"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-54-43.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-54-43.jpg" alt="Gallery 5"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-54-57.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-54-57.jpg" alt="Gallery 6"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-01.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-01.jpg" alt="Gallery 7"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-07.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-07.jpg" alt="Gallery 8"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-10.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-10.jpg" alt="Gallery 9"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-13.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-13.jpg" alt="Gallery 10"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-16.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-16.jpg" alt="Gallery 11"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+
+                    <div class="relative w-64 h-48 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 border border-gray-800 hover:border-brand-yellow group/img"
+                        onclick="openLightbox('img/gallery/photo_2025-12-23_17-55-20.jpg')">
+                        <img src="img/gallery/photo_2025-12-23_17-55-20.jpg" alt="Gallery 12"
+                            class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition">
+                        <div class="absolute inset-0 bg-black/20 group-hover/img:bg-transparent transition"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- Step-by-Step Process Section -->
     <section id="langkah" class="py-20 bg-white">
@@ -589,7 +830,7 @@
                     </p>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-700">
-                            <i class="fas fa-check text-green-500 mr-3"></i> 50 Unit Produk
+                            <i class="fas fa-check text-green-500 mr-3"></i> 100 Unit Produk
                         </li>
                         <li class="flex items-center text-gray-700">
                             <i class="fas fa-check text-green-500 mr-3"></i> Packaging Standard
@@ -599,6 +840,9 @@
                         </li>
                         <li class="flex items-center text-gray-400">
                             <i class="fas fa-times mr-3"></i> Tiada Design Logo
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-3"></i> Design label disediakan founder
                         </li>
                     </ul>
                     <a href="#bayar"
@@ -615,22 +859,25 @@
                         POPULAR</div>
                     <h3 class="text-2xl font-bold text-brand-yellow">New Founder</h3>
                     <div class="my-6">
-                        <span class="text-4xl font-black text-white tracking-tight">RM 1,499</span>
+                        <span class="text-4xl font-black text-white tracking-tight">RM 1,999</span>
                         <span class="text-gray-400">/mula</span>
                     </div>
                     <p class="text-gray-400 mb-6 text-sm">Pakej lengkap untuk mulakan jenama nampak profesional.</p>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-white">
-                            <i class="fas fa-check text-brand-yellow mr-3"></i> <strong>150 Unit Produk</strong>
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> <strong>100 Unit Produk</strong>
                         </li>
                         <li class="flex items-center text-white">
                             <i class="fas fa-check text-brand-yellow mr-3"></i> Design Logo Professional
                         </li>
                         <li class="flex items-center text-white">
-                            <i class="fas fa-check text-brand-yellow mr-3"></i> Packaging Premium
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> Design Packaging Premium
                         </li>
                         <li class="flex items-center text-white">
-                            <i class="fas fa-check text-brand-yellow mr-3"></i> Marketing Kit (Gambar)
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> Design Landing Page Premium
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-brand-yellow mr-3"></i> 3 Bulan Akses TAUT Plus
                         </li>
                     </ul>
                     <a href="#bayar"
@@ -649,16 +896,25 @@
                     <p class="text-gray-600 mb-6 text-sm">Untuk yang serius nak bina empayar dan sistem ejen.</p>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-700">
-                            <i class="fas fa-check text-green-500 mr-3"></i> <strong>500 Unit Produk</strong>
+                            <i class="fas fa-check text-green-500 mr-3"></i> <strong>100 Unit Produk</strong>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <i class="fas fa-check text-green-500 mr-3"></i> Full Branding Guideline
+                            <i class="fas fa-check text-green-500 mr-3"></i> Design Logo Professional
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <i class="fas fa-check text-green-500 mr-3"></i> Website E-Commerce
+                            <i class="fas fa-check text-green-500 mr-3"></i> Design Packaging Premium
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <i class="fas fa-check text-green-500 mr-3"></i> 1-on-1 Coaching Sesi
+                            <i class="fas fa-check text-green-500 mr-3"></i> Design Landing Page Premium
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> Full Copywriting Landing Page
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> 1 Tahun Akses TAUT Plus
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-green-500 mr-3"></i> 6 Bulan Group Support
                         </li>
                     </ul>
                     <a href="#bayar"
@@ -678,25 +934,17 @@
             <h2 class="text-4xl md:text-6xl font-black mb-8 mt-4">Dah Bersedia?</h2>
             <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
                 Klik butang di bawah untuk lock harga promosi ini. Team kami akan hubungi anda dalam masa 24 jam selepas
-                pembayaran disahkan.
+                mesej Whatsapp anda diterima.
             </p>
 
             <div class="bg-brand-dark p-8 rounded-2xl max-w-md mx-auto border border-gray-800">
                 <h3 class="text-2xl font-bold text-white mb-6">Hubungi Kami Untuk Daftar</h3>
                 <div class="space-y-4">
-                    <button
+                    <a href="https://wa.me/60103110322?text=Saya%20Berminat%20dengan%20Pakej%20FounderKit"
+                        target="_blank"
                         class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center transition text-lg">
                         <i class="fab fa-whatsapp text-2xl mr-3"></i> WhatsApp Team FounderKit
-                    </button>
-                    <div class="flex items-center justify-center space-x-4 my-4">
-                        <div class="h-px bg-gray-700 w-full"></div>
-                        <span class="text-gray-500 text-sm">ATAU</span>
-                        <div class="h-px bg-gray-700 w-full"></div>
-                    </div>
-                    <button
-                        class="w-full bg-brand-yellow hover:bg-white text-brand-black font-bold py-4 px-6 rounded-lg transition text-lg">
-                        Isi Borang Tempahan
-                    </button>
+                    </a>
                 </div>
                 <p class="text-xs text-gray-500 mt-4">
                     *Slot adalah terhad untuk memastikan kualiti produk terjaga.
@@ -724,7 +972,7 @@
             </div>
             <div
                 class="border-t border-gray-900 pt-8 text-center md:text-left text-gray-600 text-sm flex flex-col md:flex-row justify-between">
-                <p>&copy; 2023 FounderKit Malaysia. All rights reserved.</p>
+                <p>&copy; 2022-2025 FounderKit. All rights reserved.</p>
                 <div class="space-x-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-white">Terma & Syarat</a>
                     <a href="#" class="hover:text-white">Polisi Privasi</a>
@@ -732,6 +980,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Disable scroll
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Enable scroll
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
 
 </body>
 
