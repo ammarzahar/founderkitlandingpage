@@ -937,20 +937,78 @@
                 mesej Whatsapp anda diterima.
             </p>
 
-            <div class="bg-brand-dark p-8 rounded-2xl max-w-md mx-auto border border-gray-800">
+            <div class="bg-brand-dark p-8 rounded-2xl max-w-xl mx-auto border border-gray-800">
                 <h3 class="text-2xl font-bold text-white mb-6">Hubungi Kami Untuk Daftar</h3>
-                <div class="space-y-4">
-                    <a href="https://wa.me/60103110322?text=Saya%20Berminat%20dengan%20Pakej%20FounderKit"
-                        target="_blank"
-                        class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center transition text-lg">
-                        <i class="fab fa-whatsapp text-2xl mr-3"></i> WhatsApp Team FounderKit
-                    </a>
-                </div>
-                <p class="text-xs text-gray-500 mt-4">
-                    *Slot adalah terhad untuk memastikan kualiti produk terjaga.
-                </p>
+
+                <form onsubmit="submitToWhatsApp(event)" class="space-y-4 text-left">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Nama</label>
+                        <input type="text" id="name" required
+                            class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                        <input type="email" id="email" required
+                            class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow">
+                    </div>
+
+                    <div>
+                        <label for="postcode" class="block text-sm font-medium text-gray-400 mb-1">Poskod</label>
+                        <input type="text" id="postcode" required
+                            class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow">
+                    </div>
+
+                    <div>
+                        <label for="brand" class="block text-sm font-medium text-gray-400 mb-1">Jenama (Jika
+                            ada)</label>
+                        <input type="text" id="brand"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow">
+                    </div>
+
+                    <div>
+                        <label for="package" class="block text-sm font-medium text-gray-400 mb-1">Pakej Pilihan</label>
+                        <select id="package"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow">
+                            <option value="Produk Instant">Produk Instant (RM 999)</option>
+                            <option value="New Founder">New Founder (RM 1,999)</option>
+                            <option value="Ultimate Founder">Ultimate Founder (RM 3,999)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="product_suggestion" class="block text-sm font-medium text-gray-400 mb-1">Cadangan
+                            Produk</label>
+                        <textarea id="product_suggestion" rows="3"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow"
+                            placeholder="Contoh: Saya berminat dengan set penjagaan kulit"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center transition text-lg mt-6">
+                        <i class="fab fa-whatsapp text-2xl mr-3"></i> Hantar ke WhatsApp
+                    </button>
+                </form>
+
+                <script>
+                    function submitToWhatsApp(e) {
+                        e.preventDefault();
+
+                        const name = document.getElementById('name').value;
+                        const email = document.getElementById('email').value;
+                        const postcode = document.getElementById('postcode').value;
+                        const brand = document.getElementById('brand').value || 'Tiada';
+                        const package = document.getElementById('package').value;
+                        const suggestion = document.getElementById('product_suggestion').value || 'Tiada';
+
+                        const message = `Salam FounderKit, saya berminat nak daftar.\n\nNama: ${name}\nEmail: ${email}\nPoskod: ${postcode}\nJenama: ${brand}\nPakej: ${package}\nCadangan Produk: ${suggestion}`;
+
+                        const whatsappUrl = `https://wa.me/60103110322?text=${encodeURIComponent(message)}`;
+
+                        window.open(whatsappUrl, '_blank');
+                    }
+                </script>
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
